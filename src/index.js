@@ -1,13 +1,6 @@
 import "./styles.css";
+import { loadHome } from "./home.js";
 
-/*const content = document.querySelector("#content");
-
-const heading = document.createElement("h1");
-heading.textContent = "Thad's Grill";
-
-const description = document.createElement("p");
-description.textContent = "Good food. Good vibes.";
-
-content.append(heading, description);*/
+loadHome();
 
 console.log("Restaurant Page is running!");
