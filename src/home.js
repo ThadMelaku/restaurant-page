@@ -1,7 +1,8 @@
-import grillImage from "./images/grill.jpg";
+import grillImage from "./images/grill.png";
 
-export function loadHome() {
-  const content = document.querySelector("#content");
+export function createHomePage() {
+  const home = document.createElement("div");
+  home.classList.add("page", "home-page");
 
   const heading = document.createElement("h1");
   heading.textContent = "Thad's Grill";
@@ -26,12 +27,13 @@ export function loadHome() {
   weekend.textContent = "Sat-Sun: 9am - 11pm";
 
   hours.append(weekday, weekend);
-
-  content.append(
+  home.append(
     heading,
     image,
     description,
     hoursHeading,
     hours
   );
+
+  return home
 }

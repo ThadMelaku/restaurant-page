@@ -1,6 +1,28 @@
 import "./styles.css";
-import { loadHome } from "./home.js";
+import { createHomePage } from "./home.js";
+import { createMenuPage } from "./menu.js";
+import { createContactPage } from "./contact.js";
 
-loadHome();
+const content = document.querySelector("#content");
+const homeBtn = document.querySelector("#home-btn");
+const menuBtn = document.querySelector("#menu-btn");
+const contactBtn = document.querySelector("#contact-btn");
 
-console.log("Restaurant Page is running!");
+function loadPage(pageElement) {
+  content.textContent = "";
+  content.appendChild(pageElement);
+}
+
+homeBtn.addEventListener("click", () => {
+  loadPage(createHomePage());
+});
+
+menuBtn.addEventListener("click", () => {
+  loadPage(createMenuPage());
+});
+
+contactBtn.addEventListener("click", () => {
+  loadPage(createContactPage());
+});
+
+loadPage(createHomePage());

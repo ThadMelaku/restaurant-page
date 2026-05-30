@@ -12,7 +12,9 @@ export default {
     clean: true,
   },
 
-   devServer: {
+  devtool: "eval-source-map",
+
+  devServer: {
     watchFiles: ["./src/template.html"],
   },
 
@@ -25,12 +27,12 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.html$/i,
         loader: "html-loader",
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -38,7 +40,4 @@ export default {
       },
     ],
   },
-
-  
-
 };
