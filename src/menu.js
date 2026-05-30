@@ -1,3 +1,5 @@
+import pancakesImage from "./images/pancakes.png";
+
 export function createMenuPage() {
   const menu = document.createElement("div");
   menu.classList.add("page", "menu-page");
@@ -5,13 +7,18 @@ export function createMenuPage() {
   const heading = document.createElement("h1");
   heading.textContent = "Menu";
 
+   const image = document.createElement("img");
+    image.src = pancakesImage;
+    image.alt = "pancakes";
+
   const list = document.createElement("ul");
 
   const items = [
+    "Post-Run Pancakes - $14",
     "Classic Burger - $16",
     "BBQ Chicken Sandwich - $15",
     "Loaded Fries - $10",
-    "Post-Run Pancakes - $14",
+
   ];
 
   items.forEach((item) => {
@@ -20,7 +27,7 @@ export function createMenuPage() {
     list.appendChild(li);
   });
 
-  menu.append(heading, list);
+  menu.append(heading, image, list);
 
   return menu;
 }

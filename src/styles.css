@@ -25,3 +25,14 @@ img {
   width: 100%;
   height: auto;
 }
+
+.home-page ul,
+.menu-page ul {
+  display: inline-block;
+  text-align: left;
+}
+.menu-page img {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 400px;
+}
